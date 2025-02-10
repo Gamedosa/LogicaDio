@@ -19,32 +19,36 @@ let hero = [
     ["Gabriel", 1500]
 ];
 
+let level = "";
+
 switch (true) {
     case hero[0][1] < 1000:
-        console.log("Ferro");
+        level = "Ferro";
         break;
     case hero[0][1] > 1000 && hero[0][1] <= 2000:
-        console.log("Bronze");
+        level = "Bronze";
         break;
     case hero[0][1] > 2000 && hero[0][1] <= 5000:
-        console.log("Prata");
+        level = "Prata";
         break;
     case hero[0][1] > 5000 && hero[0][1] <= 7000:
-        console.log("Ouro");
+        level = "Ouro";
         break;
-    case hero[0][1] > 7001 && hero[0][1] <= 8000: 
-        console.log("Platina");
+    case hero[0][1] > 7001 && hero[0][1] <= 8000:
+        level = "Platina";
         break;
-    case hero[0][1] > 8001 && hero[0][1] <= 9000: 
-        console.log("Ascendente");
+    case hero[0][1] > 8001 && hero[0][1] <= 9000:
+        level = "Ascendente";
         break;
     case hero[0][1] > 9001 && hero[0][1] <= 10000:
-        console.log("Imortal");
+        level = "Imortal";
         break;
     case hero[0][1] >= 10001:
-        console.log("Radiante");
+        level = "Radiante";
         break;
     default:
-        console.log("Error");
+        level = "Error";
         break;
 }
+
+console.log(`O Herói de nome ${hero[0][0]} está no nível de ${level}`);
